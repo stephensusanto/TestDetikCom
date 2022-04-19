@@ -1,9 +1,16 @@
 <?php
 include("koneksi.php");
 
-$event = $argv[1];
-
-$total = $argv[2];
+if (!empty($argv[1])) {
+    $event = $argv[1];
+}else{
+    $event = null;
+}
+if (!empty($argv[2])) {
+    $total = $argv[2];
+}else {
+    $total = null;
+}
 
 if(!$event || !$total || filter_var($event, FILTER_VALIDATE_INT) != $event || filter_var($total, FILTER_VALIDATE_INT) != $total ){
   echo "mohon menginput data event dan total dengan benar";  
