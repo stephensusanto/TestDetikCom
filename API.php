@@ -32,7 +32,7 @@ function getTiketbyID(){
                     'message' =>'No Data Found'
                 );
     }
-
+    mysqli_close($koneksi);
     header('Content-Type: application/json');
     echo json_encode($response);
        
@@ -70,7 +70,7 @@ function updateTicket()
          );
       }
    
-
+   mysqli_close($koneksi);
    header('Content-Type: application/json');
    echo json_encode($response);
 }
