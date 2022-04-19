@@ -20,7 +20,7 @@ function getTiketbyID(){
         $data['id_tiket'] = $row['id_tiket'];
         $data['status_tiket'] = $row['status_ticket'];
     }            
-    if($data)
+    if($data != null)
     {
     $response = array(
                     'id_tiket' => $data['id_tiket'],
